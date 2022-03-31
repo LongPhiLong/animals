@@ -5,13 +5,14 @@ function Navbar(props) {
     let navigate = useNavigate();
     let logout = () => {
         localStorage.removeItem("accessToken");
+        navigate("../", { replace: true });
     }
-    navigate("../", { replace: true });
+    
     return (
         <Navi>
-        <div className="container">
-                <button className="btn" onClick={logout}><a href="/">LOG OUT</a></button>
-        </div>
+            <div className="container">
+                <button className="btn" onClick={logout}><a>LOG OUT</a></button>
+            </div>
         </Navi>
     )
 }

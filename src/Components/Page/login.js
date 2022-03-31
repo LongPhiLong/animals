@@ -9,9 +9,10 @@ function Login() {
     let navigate = useNavigate();
     let login = () => {
         localStorage.setItem("accessToken", true);
-    }
-     navigate("../animalpage", { replace: true });
+        navigate("../animalpage", { replace: true });
 
+    }
+     
     return (
         <Logins>
         <div className="title">

@@ -6,11 +6,12 @@ import { useState } from "react";
 
 function App() {
   return (
-    
-    <BrowserRouter>
+     <BrowserRouter>
       <Routes>
-        <Route  path='/' element={<Login />}/>
-        <Route  path='/animalpage' element ={ localStorage.getItem("accessToken") ? <Animals/> : <Login /> }/>
+              <Route  path='/animalpage' render ={()=> { 
+                return localStorage.getItem("accessToken") ? <Animals/> : <Login /> 
+                }}/>
+              <Route  path='/' element={<Login />}/>
       </Routes>
     </BrowserRouter>
   );
