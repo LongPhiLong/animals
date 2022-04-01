@@ -1,16 +1,14 @@
 import styledComponents from "styled-components";
 import React from "react";
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
   
 
 
 function Login() {
-    let navigate = useNavigate();
+    let navigate = useNavigate()
     let login = () => {
         localStorage.setItem("accessToken", true);
         navigate("../animalpage", { replace: true });
-
     }
      
     return (

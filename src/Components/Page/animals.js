@@ -5,14 +5,11 @@ import Navbar from "../Navbar/Navbar";
 
 function Animals(props) {
     return (
-        <Container>
+        <div>
             <Navbar />
             <Content />
-        </Container>
+        </div>
     )
 }
 
 export default Animals;
-export const Container = styledComponents.div`
-
-`;

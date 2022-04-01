@@ -1,17 +1,17 @@
 import Login from "./Components/Page/login";
 import { BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
-import Animals from "./Components/Page/animals";
 import React from "react";
-import { useState } from "react";
+import Animals from './Components/Page/animals'
 
 function App() {
   return (
      <BrowserRouter>
       <Routes>
-              <Route  path='/animalpage' render ={()=> { 
-                return localStorage.getItem("accessToken") ? <Animals/> : <Login /> 
-                }}/>
-              <Route  path='/' element={<Login />}/>
+              <Route  path='/animalpage' element ={ 
+                localStorage.getItem("accessToken") ? <Animals/> :< Login/> 
+                }
+              />
+              <Route exact path='/' element={<Login />}/>
       </Routes>
     </BrowserRouter>
   );
